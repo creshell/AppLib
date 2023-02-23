@@ -7,6 +7,8 @@
 package applib;
  
 import java.awt.Color;
+import internalPAge.*;
+
 
 /**
  *
@@ -42,10 +44,8 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         reportspanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
-        jDesktopPane2 = new javax.swing.JDesktopPane();
-        jLabel5 = new javax.swing.JLabel();
+        maindesktop = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,10 +71,13 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1.setText("DASHBOARD");
         dashpanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 140, 18));
 
-        navbar.add(dashpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 140, 40));
+        navbar.add(dashpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 140, 40));
 
         userpanel.setBackground(new java.awt.Color(0, 102, 153));
         userpanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userpanelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 userpanelMouseEntered(evt);
             }
@@ -92,9 +95,9 @@ public class dashBoard extends javax.swing.JFrame {
                 jLabel2MouseEntered(evt);
             }
         });
-        userpanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 140, 18));
+        userpanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 18));
 
-        navbar.add(userpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 140, 40));
+        navbar.add(userpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 140, 40));
 
         reportspanel.setBackground(new java.awt.Color(0, 102, 153));
         reportspanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,10 +120,7 @@ public class dashBoard extends javax.swing.JFrame {
         });
         reportspanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 140, 18));
 
-        navbar.add(reportspanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 140, 40));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Desktop\\prin.png")); // NOI18N
-        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 190));
+        navbar.add(reportspanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 140, 40));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 140, 430);
@@ -141,31 +141,21 @@ public class dashBoard extends javax.swing.JFrame {
         jPanel1.add(header);
         header.setBounds(140, 0, 570, 50);
 
-        jDesktopPane2.setBackground(new java.awt.Color(153, 204, 255));
+        maindesktop.setBackground(new java.awt.Color(153, 204, 255));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Desktop\\6.png")); // NOI18N
-
-        jDesktopPane2.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
-        jDesktopPane2.setLayout(jDesktopPane2Layout);
-        jDesktopPane2Layout.setHorizontalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                .addGap(179, 179, 179))
+        javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
+        maindesktop.setLayout(maindesktopLayout);
+        maindesktopLayout.setHorizontalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
         );
-        jDesktopPane2Layout.setVerticalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                .addGap(47, 47, 47))
+        maindesktopLayout.setVerticalGroup(
+            maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jDesktopPane2);
-        jDesktopPane2.setBounds(110, 50, 600, 380);
+        jPanel1.add(maindesktop);
+        maindesktop.setBounds(140, 50, 570, 380);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -216,6 +206,12 @@ public class dashBoard extends javax.swing.JFrame {
         reportspanel.setBackground(navcolor);
     }//GEN-LAST:event_reportspanelMouseExited
 
+    private void userpanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpanelMouseClicked
+        userPage us = new userPage();
+        maindesktop.add(us).setVisible(true);
+        
+    }//GEN-LAST:event_userpanelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -254,13 +250,11 @@ public class dashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel dashpanel;
     private javax.swing.JPanel header;
-    private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
     private javax.swing.JPanel reportspanel;
     private javax.swing.JPanel userpanel;
