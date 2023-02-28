@@ -127,7 +127,7 @@ public class dashboardPage extends javax.swing.JInternalFrame {
         studentinfo.add(jLabel8);
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText(" Student Info");
+        jLabel9.setText("  Input Student Info");
         studentinfo.add(jLabel9);
 
         jPanel2.add(studentinfo);

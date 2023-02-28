@@ -43,8 +43,6 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         userpanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        reportspanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
@@ -106,29 +104,6 @@ public class dashBoard extends javax.swing.JFrame {
         userpanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 18));
 
         navbar.add(userpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 40));
-
-        reportspanel.setBackground(new java.awt.Color(0, 102, 153));
-        reportspanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                reportspanelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                reportspanelMouseExited(evt);
-            }
-        });
-        reportspanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("REPORTS");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel3MouseEntered(evt);
-            }
-        });
-        reportspanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 18));
-
-        navbar.add(reportspanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 140, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-system-administrator-female-100.png")); // NOI18N
         navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 90));
@@ -207,18 +182,6 @@ public class dashBoard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2MouseEntered
 
-    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel3MouseEntered
-
-    private void reportspanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportspanelMouseEntered
-       reportspanel.setBackground(bodycolor);
-    }//GEN-LAST:event_reportspanelMouseEntered
-
-    private void reportspanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportspanelMouseExited
-        reportspanel.setBackground(navcolor);
-    }//GEN-LAST:event_reportspanelMouseExited
-
     private void userpanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpanelMouseClicked
         userPage us = new userPage();
         maindesktop.add(us).setVisible(true);
@@ -270,7 +233,6 @@ public class dashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -278,7 +240,6 @@ public class dashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
-    private javax.swing.JPanel reportspanel;
     private javax.swing.JPanel userpanel;
     // End of variables declaration//GEN-END:variables
 }
