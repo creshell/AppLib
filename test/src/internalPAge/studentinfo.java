@@ -48,7 +48,7 @@ public class studentinfo extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(197, 110));
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 204));
         jPanel3.setLayout(null);
@@ -59,7 +59,8 @@ public class studentinfo extends javax.swing.JInternalFrame {
         jPanel3.add(jLabel2);
         jLabel2.setBounds(10, 10, 230, 40);
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 60));
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 0, 600, 60);
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,17 +105,18 @@ public class studentinfo extends javax.swing.JInternalFrame {
         jPanel2.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 390, 30));
         jPanel2.add(Tin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 170, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 580, 260));
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(10, 70, 580, 260);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
         );
 
         pack();

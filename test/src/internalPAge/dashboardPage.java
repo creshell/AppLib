@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package internalPAge;
+package src.internalPAge;
 
 import java.awt.Color;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -41,17 +41,15 @@ public class dashboardPage extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        dailylog = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         studentinfo = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        updatelog = new javax.swing.JPanel();
+        log = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        updatelog1 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(570, 380));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,41 +76,6 @@ public class dashboardPage extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
         jPanel2.setLayout(null);
 
-        dailylog.setBackground(new java.awt.Color(0, 153, 204));
-        dailylog.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                dailylogMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                dailylogMouseExited(evt);
-            }
-        });
-        dailylog.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Daily Log ");
-        dailylog.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(0, 153, 204));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel5MouseExited(evt);
-            }
-        });
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-log-80.png")); // NOI18N
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 100, 100));
-
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Daily Log ");
-        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-
-        dailylog.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jPanel2.add(dailylog);
-        dailylog.setBounds(210, 70, 140, 150);
-
         studentinfo.setBackground(new java.awt.Color(0, 153, 204));
         studentinfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -122,19 +85,20 @@ public class dashboardPage extends javax.swing.JInternalFrame {
                 studentinfoMouseExited(evt);
             }
         });
+        studentinfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-identification-documents-100.png")); // NOI18N
-        studentinfo.add(jLabel8);
+        studentinfo.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 5, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel9.setText("  Input Student Info");
-        studentinfo.add(jLabel9);
+        studentinfo.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 110, -1, -1));
 
         jPanel2.add(studentinfo);
         studentinfo.setBounds(30, 70, 140, 150);
 
-        updatelog.setBackground(new java.awt.Color(0, 153, 204));
-        updatelog.addMouseListener(new java.awt.event.MouseAdapter() {
+        log.setBackground(new java.awt.Color(0, 153, 204));
+        log.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 updatelogMouseEntered(evt);
             }
@@ -142,26 +106,43 @@ public class dashboardPage extends javax.swing.JInternalFrame {
                 updatelogMouseExited(evt);
             }
         });
-        updatelog.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        log.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-update-100.png")); // NOI18N
-        updatelog.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 5, -1, -1));
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-log-80.png")); // NOI18N
+        log.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, 90));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel11.setText("Update Logs");
-        updatelog.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        jLabel11.setText("Daily Logs");
+        log.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        jPanel2.add(updatelog);
-        updatelog.setBounds(380, 70, 140, 150);
+        jPanel2.add(log);
+        log.setBounds(210, 70, 150, 150);
+
+        updatelog1.setBackground(new java.awt.Color(0, 153, 204));
+        updatelog1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                updatelog1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                updatelog1MouseExited(evt);
+            }
+        });
+        updatelog1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\COLLEGE17\\Downloads\\icons8-update-100.png")); // NOI18N
+        updatelog1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 5, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel13.setText("Update Logs");
+        updatelog1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        jPanel2.add(updatelog1);
+        updatelog1.setBounds(400, 70, 140, 150);
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 600, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dailylogMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dailylogMouseEntered
-       dailylog.setBackground(navcolor);
-    }//GEN-LAST:event_dailylogMouseEntered
 
     private void studentinfoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentinfoMouseEntered
        studentinfo.setBackground(navcolor);
@@ -171,39 +152,37 @@ public class dashboardPage extends javax.swing.JInternalFrame {
         studentinfo.setBackground(headercolor);
     }//GEN-LAST:event_studentinfoMouseExited
 
-    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
-        
-    }//GEN-LAST:event_jPanel5MouseExited
-
     private void updatelogMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updatelogMouseEntered
-        updatelog.setBackground(navcolor);
+        log.setBackground(navcolor);
     }//GEN-LAST:event_updatelogMouseEntered
 
-    private void dailylogMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dailylogMouseExited
-      dailylog.setBackground(headercolor);
-    }//GEN-LAST:event_dailylogMouseExited
-
     private void updatelogMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updatelogMouseExited
-        updatelog.setBackground(headercolor);
+        log.setBackground(headercolor);
     }//GEN-LAST:event_updatelogMouseExited
+
+    private void updatelog1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updatelog1MouseEntered
+        updatelog1.setBackground(navcolor);
+    }//GEN-LAST:event_updatelog1MouseEntered
+
+    private void updatelog1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updatelog1MouseExited
+        updatelog1.setBackground(headercolor);
+    }//GEN-LAST:event_updatelog1MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel dailylog;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel log;
     private javax.swing.JPanel studentinfo;
-    private javax.swing.JPanel updatelog;
+    private javax.swing.JPanel updatelog1;
     // End of variables declaration//GEN-END:variables
 }
